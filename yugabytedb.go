@@ -147,7 +147,7 @@ func newUser(ctx context.Context, db *sql.DB, username, password string, expirat
 				"username":   username,
 				"name":       username, // backwards compatibility
 				"password":   password,
-				"expiration": expiration.Format("2006-01-02 15:04:05-0700"),
+				"expiration": expiration.Format("02-01-2006 15:04:05 PM"),
 			}
 
 			err = dbtxn.ExecuteTxQuery(ctx, tx, m, query)
