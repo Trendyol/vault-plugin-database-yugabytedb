@@ -95,6 +95,16 @@ password           -U6NdLMtqR5q9tuWmriI
 username           V_TOKEN_MY-FIRST-ROLE_D3VYCRJQM2G74TFSM1DO_1627894589
 ```
 
+## Test
+
+There is a folder named [./examples](./examples) where you can test the dynamic credentials that you created.
+
+Go to the `examples/create-table` folder and run the code with your dynamic credentials like the following command:
+```shell
+$ go run main.go "V_TOKEN_MY-FIRST-ROLE_D3VYCRJQM2G74TFSM1DO_1627894589" "-U6NdLMtqR5q9tuWmriI"
+```
+The code should create the `employee` table successfully.
+
 ## Known Limitations
 * There is no support for expiration in YugabyteDB roles yet, we should tackle this problem with `VALID UNTIL` role option and passing the value from Vault `creation_statements`.
 * There is no support for updating and deleting YugabyteDB roles.
