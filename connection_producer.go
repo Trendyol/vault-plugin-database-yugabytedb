@@ -66,7 +66,6 @@ func (c *SQLConnectionProducer) Init(ctx context.Context, conf map[string]interf
 		return nil, fmt.Errorf("password cannot be empty")
 	}
 
-
 	// Set initialized to true at this point since all fields are set,
 	// and the connection can be established at a later time.
 	c.Initialized = true
@@ -110,12 +109,6 @@ func (c *SQLConnectionProducer) Connection(ctx context.Context) (interface{}, er
 	}
 
 	return c.db, nil
-}
-
-func (c *SQLConnectionProducer) SecretValues() map[string]interface{} {
-	return map[string]interface{}{
-		c.Password: "[password]",
-	}
 }
 
 // Close attempts to close the connection
