@@ -1,3 +1,5 @@
+
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/Trendyol/vault-plugin-database-yugabytedb/badge)](https://scorecard.dev/viewer/?uri=github.com/Trendyol/vault-plugin-database-yugabytedb)
 #  vault-database-plugin-yugabytedb
 This project aims to implement [Custom Database plugin interface](https://www.vaultproject.io/docs/secrets/databases/custom) for providing support for creating dynamic credentials in [YugabyteDB](https://docs.yugabyte.com).
 
